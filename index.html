@@ -5,7 +5,7 @@
 
 <head>
 
-<title>HICO: A Benchmark for Recognizing Human-Object Interactions in Images</title>
+<title>HICO &amp; HICO-DET</title>
 
 </head>
 
@@ -18,44 +18,97 @@
 <center>
 <h1>
 <font face=helvetica style="font-size:87%">
-HICO: A Benchmark for Recognizing Human-Object Interactions in Images
+HICO &amp; HICO-DET
+<br>
+Benchmarks for Recognizing Human-Object Interactions in Images
 </font>
 </h1>
 </center>
 
 <br>
 
-<center>
-<font face=helvetica style=font-size:18px>
-<a href="http://www-personal.umich.edu/~ywchao/">Yu-Wei Chao</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Zhan Wang &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Yugeng He &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<a href="http://jiaxuan.herokuapp.com/">Jiaxuan Wang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<a href="http://web.eecs.umich.edu/~jiadeng/">Jia Deng</a>
+<h2><font face=helvetica style=font-size:24px>Introduction</font></h2>
+<hr style="margin-top:-10px; margin-bottom:13px">
+<font face=helvetica style=font-size:15px>
+<p align=justify>
+We introduce two new benchmarks for classifying and detecting human-object interactions (HOI) in images:
+<ol style="margin-top:-7px">
+<li>HICO (Humans Interacting with Common Objects)</li>
+<li>HICO-DET</li>
+</ol>
+</p>
+<p>
+<b>Key features:</b>
+<ol style="margin-top:-7px">
+<li>A diverse set of interactions with common object categories</li>
+<li>A list of well-defined, sense-based HOI categories</li>
+<li>An exhaustive labeling of co-occurring interactions with an object category in each image</li>
+<li>The annotation of each HOI instance (i.e. a human and an object bounding box with an interaction class label) in all images</li>
+</ol>
+</p>
 </font>
-</center>
 
-<br>
-<br>
-<br>
+<p style="padding-bottom:1px"></p>
 
+
+<h2><font face=helvetica style=font-size:24px>Tasks</font></h2>
+<hr style="margin-top:-10px; margin-bottom:13px">
+<font face=helvetica style=font-size:15px>
+
+<h3>Task 1: HOI Classification</h3>
+<p style="padding-bottom: 10px" align=justify>
+The input is an image and the output is a set of binary labels, each representing the presence or absense of an HOI class.
+</p>
 <center>
+<div>
 <img src="figures/pg_0013.jpg" height="200">
 <img src="figures/pg_0006.jpg" height="200">
 <img src="figures/pg_0011.jpg" height="200">
+<br>
+Sample annotations in the HICO benchmark
+<div>
 </center>
 
-<h2><font face=helvetica style=font-size:24px>Abstract</font></h2>
-<hr style="margin-top:-10px; margin-bottom:-5px">
-<p align=justify>
-<font face=helvetica style=font-size:15px>
-We introduce a new benchmark &quot;Humans Interacting with Common Objects&quot; (HICO) for recognizing human-object interactions (HOI). We demonstrate the key features of HICO: a diverse set of interactions with common object categories, a list of well-defined, sense-based HOI categories, and an exhaustive labeling of co-occurring interactions with an object category in each image. We perform an in-depth analysis of representative current approaches and show that DNNs enjoy a significant edge. In addition, we show that semantic knowledge can significantly improve HOI recognition, especially for uncommon categories. 
-</font>
+<h3>Task 2: HOI Detection</h3>
+<p style="padding-bottom: 10px" align=justify>
+The input is an image and the output is a set of bounding box pairs, each localizes a human plus an object and predicts an HOI class label.
 </p>
+<center>
+<div>
+<div style="display: inline-block">
+<img src="figures/01_riding_horse_142_1.png" height="120">
+<br><font face=serif>Riding a horse</font>
+</div>
+&nbsp;
+<div style="display: inline-block">
+<img src="figures/02_feeding_horse_4278_1.png" height="120">
+<br><font face=serif>Feeding a horse</font>
+</div>
+&nbsp;
+<div style="display: inline-block">
+<img src="figures/03_eating_apple_7258_1.png" height="120">
+<br><font face=serif>Eating an apple</font>
+</div>
+&nbsp;
+<div style="display: inline-block">
+<img src="figures/04_cutting_apple_14663_1.png" height="120">
+<br><font face=serif>Cutting an apple</font>
+</div>
+<br>
+<br>
+Sample annotations in the HICO-DET benchmark
+</div>
+</center>
+
+</font>
+
+<p style="padding-bottom:1px"></p>
+
 
 <h2><font face=helvetica style=font-size:24px>Paper</font></h2>
 <hr style="margin-top:-10px; margin-bottom:13px">
 <font face=helvetica style=font-size:15px>
+
 <a href="http://www-personal.umich.edu/~ywchao/publications/chao_iccv2015.pdf" style="text-decoration: none;">
 <img src='./figures/paper_icon.png' height='60px' style="border:1px solid black">
 </a>
@@ -65,6 +118,20 @@ Yu-Wei Chao, Zhan Wang, Yugeng He, Jiaxuan Wang, and Jia Deng. <br>
 Proceedings of the IEEE International Conference on Computer Vision (<b>ICCV</b>), 2015. <br>
 [<a href="http://www-personal.umich.edu/~ywchao/publications/chao_iccv2015.pdf">pdf</a>] [<a href="http://www-personal.umich.edu/~ywchao/publications/chao_iccv2015_supp.pdf">supplementary material</a>] [<a href="http://www-personal.umich.edu/~ywchao/publications/chao_iccv2015_poster.pdf">poster</a>] [<a href="http://www-personal.umich.edu/~ywchao/publications/chao_iccv2015.bib">bibtex</a>]
 </div>
+
+<br>
+<br>
+
+<a href="https://arxiv.org/abs/1702.05448" style="text-decoration: none;">
+<img src='./figures/paper_icon_arxiv2017.png' height='60px' style="border:1px solid black">
+</a>
+<div style="margin-top: 0px; margin-left: 15px; display: inline-block; line-height:18px;">
+Yu-Wei Chao, Yunfan Liu, Xieyang Liu, Huayi Zeng, and Jia Deng. <br>
+<b>Learning to Detect Human-Object Interactions.</b> <br>
+arXiv preprint arXiv:1702.05448, 2017. <br>
+[<a href="https://arxiv.org/abs/1702.05448">pdf</a>] [<a href="">bibtex</a>]
+</div>
+
 </font>
 
 <p style="padding-bottom:1px"></p>
@@ -73,20 +140,46 @@ Proceedings of the IEEE International Conference on Computer Vision (<b>ICCV</b>
 <h2><font face=helvetica style=font-size:24px>Dataset</font></h2>
 <hr style="margin-top:-10px; margin-bottom:13px">
 <font face=helvetica style=font-size:15px>
+
+<div>
 <a href="http://napoli18.eecs.umich.edu/public_html/data/hico_20150920.tar.gz" style="text-decoration: none;">
 <img src='./figures/download_button.jpg' height='30px'>
 </a>
-<div style="margin-left: 10px; display: inline-block;"> 
-<a href="http://napoli18.eecs.umich.edu/public_html/data/hico_20150920.tar.gz">HICO dataset version 20150920</a> 7.5GB<br>
-Images and annotations.
+<div style="margin-left: 10px; display: inline-block;">
+<a href="http://napoli18.eecs.umich.edu/public_html/data/hico_20150920.tar.gz">HICO version 20150920</a> 7.5GB<br>
+Images and annotations for the HOI classification task.
 </div>
-<div style="margin-top: 20px">
+</div>
+
+<br>
+
+<div>
+<a href="http://napoli18.eecs.umich.edu/public_html/data/hico_20160224_det.tar.gz" style="text-decoration: none;">
+<img src='./figures/download_button.jpg' height='30px'>
+</a>
+<div style="margin-left: 10px; display: inline-block;"> 
+<a href="http://napoli18.eecs.umich.edu/public_html/data/hico_20160224_det.tar.gz">HICO-DET version 20160224</a> 7.5GB<br>
+Images and annotations for the HOI detection task.
+</div>
+</div>
+
+<div>
 <ul style="padding-left: 16px">
 <li><a href="http://napoli18.eecs.umich.edu/public_html/data/hico_list_hoi.txt">list of HOIs</a></li>
 <li><a href="http://napoli18.eecs.umich.edu/public_html/data/hico_list_vb.txt">list of verbs</a></li>
 <li><a href="http://napoli18.eecs.umich.edu/public_html/data/hico_list_obj.txt">list of objects</a></li>
 </ul>
 </div>
+
+<div style="margin-top: 20px">
+<p><b>Note:</b>
+<ol style="margin-top:-10px">
+<li>HICO and HICO-DET share the same set of HOI categories.</li>
+<li>HICO-DET is a superset of HICO in terms of the image set.</li>
+</ol>
+</p>
+</div>
+
 </font>
 
 <p style="padding-bottom:1px"></p>
@@ -95,14 +188,29 @@ Images and annotations.
 <h2><font face=helvetica style=font-size:24px>Source Code</font></h2>
 <hr style="margin-top:-10px; margin-bottom:13px">
 <font face=helvetica style=font-size:15px>
+
+<div>
 <a href="https://github.com/ywchao/hico_benchmark" style="text-decoration: none;">
 <img src='./figures/GitHub-Mark/PNG/GitHub-Mark-64px.png' height='30px'>
 </a>
 <div style="margin-left: 10px; display: inline-block;"> 
-
 <a href="https://github.com/ywchao/hico_benchmark">hico_benchmark</a><br>
-GitHub repo that holds the source code for reproducing the empirical results.
+Source code for reproducing the empirical results in the ICCV 2015 paper.
 </div>
+</div>
+
+<br>
+
+<div>
+<a href="" style="text-decoration: none;">
+<img src='./figures/GitHub-Mark/PNG/GitHub-Mark-64px.png' height='30px'>
+</a>
+<div style="margin-left: 10px; display: inline-block;">
+<a href="">ho-rcnn</a> (<b>coming soon</b>)<br>
+Source code for reproducing the empirical results in the arXiv paper.
+</div>
+</div>
+
 <!--Coming soon.-->
 </font>
 
@@ -117,6 +225,30 @@ src="https://www.youtube.com/embed/UHAI_aDLCi0">
 </iframe>
 </p>
 
+<p style="padding-bottom:1px"></p>
+
+
+<h2><font face=helvetica style=font-size:24px>People</font></h2>
+<hr style="margin-top:-10px; margin-bottom:-5px">
+<p align=justify>
+<font face=helvetica style=font-size:15px>
+<ul>
+<li><a href="http://www-personal.umich.edu/~ywchao/">Yu-Wei Chao</a></li>
+<li>Zhan Wang</li>
+<li>Yugeng He</li>
+<li><a href="http://jiaxuan.herokuapp.com/">Jiaxuan Wang</a></li>
+<li>Hei Law</li>
+<li>Yunfan Liu</li>
+<li><a href="http://lxieyang.github.io/">Xieyang Liu</a></li>
+<li>Huayi Zeng</li>
+<li><a href="http://web.eecs.umich.edu/~jiadeng/">Jia Deng</a></li>
+</ul>
+</font>
+</p>
+
+<p style="padding-bottom:1px"></p>
+
+
 <h2><font face=helvetica style=font-size:24px>Contact</font></h2>
 <hr style="margin-top:-10px; margin-bottom:-5px">
 <p align=justify>
@@ -127,8 +259,9 @@ Send any comments or questions to Yu-Wei Chao: <a href="mailto:ywchao@umich.edu"
 
 <p style="padding-bottom:1px"></p>
 
+
 <hr>
-<font face=helvetica style=font-size:15px>Last updated on 2016/10/15</font>
+<font face=helvetica style=font-size:15px>Last updated on 2017/02/19</font>
 </td>
 </tr>
 
